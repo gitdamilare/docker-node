@@ -68,3 +68,18 @@ Step 5: access the nodejs application from browser
     docker build -t my-app:1.0 .       
     
 The dot "." at the end of the command denotes location of the Dockerfile.
+
+
+### Login to registry
+
+    az login 
+    az acr login --name nodewebappdocker
+
+### Tag before you push the image to your registry.
+docker tag node-web-app:1.1 nodewebappdocker.azurecr.io/app/nodewebapp:1.1
+
+### Push the image to your registry
+docker push nodewebappdocker.azurecr.io/app/nodewebapp:1.1
+
+Pull and Test 
+docker run -d -p 3001:3000 nodewebappdocker.azurecr.io/app/nodewebapp
