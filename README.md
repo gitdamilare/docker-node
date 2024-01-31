@@ -69,6 +69,10 @@ Step 5: access the nodejs application from browser
     
 The dot "." at the end of the command denotes location of the Dockerfile.
 
+### Create a Container Registery
+https://portal.azure.com/#view/HubsExtension/BrowseResource/resourceType/Microsoft.ContainerRegistry%2Fregistries
+Setup Container Regiatry on Azure 
+name nodewebappdocker
 
 ### Login to registry
 
